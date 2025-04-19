@@ -419,7 +419,7 @@ img {
 }
 
 /* ===== WORK =====*/
-.work__container {
+/* .work__container {
   row-gap: 2rem;
 }
 
@@ -435,6 +435,24 @@ img {
 
 .work__img img:hover {
   transform: scale(1.1);
+} */
+
+.work__container {
+  row-gap: 2rem;
+}
+
+.work__img {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.work__img img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.work__img:hover img {
+  transform: scale(0.95);
 }
 
 /* ===== CONTACT =====*/
