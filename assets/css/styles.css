@@ -456,21 +456,8 @@ img {
   transition: transform 0.4s ease-in-out;
 }
 
-.work__img::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.1); /* soft overlay */
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
 .work__img:hover img {
   transform: scale(0.95);
-}
-
-.work__img:hover::before {
-  opacity: 1;
 }
 
 /* ===== CONTACT =====*/
