@@ -454,7 +454,9 @@ img {
   width: 100%;
   height: auto;
   transition: transform 0.4s ease-in-out;
+  filter: none; /* Ensures no blur */
 }
+
 
 .work__img:hover img {
   transform: scale(0.95);
