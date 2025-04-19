@@ -447,8 +447,6 @@ img {
   position: relative;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.4s ease;
 }
 
 .work__img img {
@@ -462,13 +460,9 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1); /* soft overlay */
   opacity: 0;
   transition: opacity 0.4s ease;
-}
-
-.work__img:hover {
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
 }
 
 .work__img:hover img {
@@ -478,7 +472,6 @@ img {
 .work__img:hover::before {
   opacity: 1;
 }
-
 
 /* ===== CONTACT =====*/
 .contact__input {
