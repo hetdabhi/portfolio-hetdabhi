@@ -420,7 +420,7 @@ img {
 
 .skills__img {
   width: 600px;
-  height: 500px;
+  height: 600px;
   object-fit: cover; /* Optional: maintains aspect ratio by cropping */
   border-radius: 0.5rem;
 }
