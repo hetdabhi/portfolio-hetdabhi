@@ -419,15 +419,11 @@ img {
 } */
 
 .skills__img {
-  height: 400px;
-  width: 400px;
-  object-fit: cover;
+  width: 600px;
+  height: 500px;
+  object-fit: cover; /* Optional: maintains aspect ratio by cropping */
   border-radius: 0.5rem;
 }
-
-
-
-
 
 /* ===== WORK =====*/
 /* .work__container {
