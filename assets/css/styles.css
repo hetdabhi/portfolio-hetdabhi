@@ -696,22 +696,26 @@ img {
 }
 
 .about__section {
-    max-width: 500px; /* Reduced from 600px */
+    max-width: 600px;
     margin: 0 auto;
+    padding: 1rem;
     font-size: 1rem;
     color: #333;
+    font-family: 'Poppins', sans-serif; /* Optional: looks modern */
 }
-
 
 .about__title {
     font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    text-align: left;
 }
 
 .about__text {
-    margin-bottom: 1rem;
     text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 1rem;
     line-height: 1.7;
+    word-spacing: 0.05em; /* Keeps words naturally spaced */
 }
 
