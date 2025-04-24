@@ -696,10 +696,12 @@ img {
 }
 
 .about__section {
-    max-width: 600px;
+    max-width: 500px; /* Reduced from 600px */
+    margin: 0 auto;
     font-size: 1rem;
     color: #333;
 }
+
 
 .about__title {
     font-size: 1.8rem;
