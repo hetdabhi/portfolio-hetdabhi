@@ -694,3 +694,22 @@ img {
     width: 450px;
   }
 }
+
+.about__section {
+    max-width: 600px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.about__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.about__text {
+    margin-bottom: 1rem;
+    text-align: justify;
+    line-height: 1.7;
+}
+
