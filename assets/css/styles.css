@@ -701,21 +701,22 @@ img {
     padding: 1rem;
     font-size: 1rem;
     color: #333;
-    font-family: 'Poppins', sans-serif; /* Optional: looks modern */
+    font-family: 'Poppins', sans-serif;
 }
 
 .about__title {
     font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     text-align: left;
 }
 
 .about__text {
     text-align: justify;
     text-justify: inter-word;
-    margin-bottom: 1rem;
-    line-height: 1.7;
-    word-spacing: 0.05em; /* Keeps words naturally spaced */
+    margin-bottom: 0.6rem; /* ↓ reduce this to tighten paragraph gaps */
+    line-height: 1.6;       /* ↓ slightly reduced for balance */
+    word-spacing: 0.03em;
 }
+
 
