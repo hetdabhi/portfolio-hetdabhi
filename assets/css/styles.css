@@ -520,7 +520,7 @@ img {
 }
 
 
-/* ===== HOBBIES =====*/
+/* ===== HOBBIES LIST ===== */
 .hobbies-list {
   list-style-type: none;
   padding: 0;
@@ -540,23 +540,6 @@ img {
   background-color: var(--first-color);
   color: #fff;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* ===== HOBBIES SECTION TITLE =====*/
-.section-title {
-  font-size: 2rem;
-  font-weight: var(--font-bold);
-  color: var(--first-color);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-/* ===== HOBBIES CONTAINER =====*/
-#hobbies {
-  padding: 20px;
-  background-color: var(--bg-light-color);
-  border-radius: 8px;
-  margin-top: 40px;
 }
 
 
