@@ -522,14 +522,21 @@ img {
 
 /* ===== HOBBIES SECTION ===== */
 .hobbies__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Full viewport height */
     max-width: 600px;
     margin: 0 auto;
     padding: 1rem;
     font-size: 1rem;
     color: #333;
     font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light-color); /* Optional: background color */
+    border-radius: 8px; /* Optional: add rounded corners */
 }
 
+/* Hobbies Title */
 .hobbies__title {
     font-size: 1.8rem;
     font-weight: 700;
@@ -537,6 +544,7 @@ img {
     text-align: left;
 }
 
+/* Hobbies List */
 .hobbies__list {
     list-style-type: none;
     padding: 0;
@@ -558,6 +566,7 @@ img {
     color: #fff;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 
 
