@@ -521,7 +521,7 @@ img {
 
 
 /* ===== HOBBIES LIST ===== */
-.hobbies-list {
+/* .hobbies-list {
   list-style-type: none;
   padding: 0;
 }
@@ -535,12 +535,11 @@ img {
   margin-bottom: var(--mb-4);
 }
 
-/* Hover effect for each hobby item */
 .hobbies-list li:hover {
   background-color: var(--first-color);
   color: #fff;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
+} */
 
 
 /* ===== FOOTER =====*/
