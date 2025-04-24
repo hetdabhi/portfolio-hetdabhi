@@ -520,62 +520,45 @@ img {
 }
 
 
-/* Navigation Style */
-.nav {
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0;
-}
-
-.nav__item {
-  margin-right: 20px;
-}
-
-.nav__link {
-  text-decoration: none;
-  color: #333;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.nav__link:hover {
-  color: #3498db;
-}
-
-/* Active Link */
-.nav__link.active-link {
-  color: #f39c12;
-  font-weight: bold;
-}
-
-/* Hobbies Section */
-#hobbies {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
+/* ===== HOBBIES =====*/
 .hobbies-list {
   list-style-type: none;
   padding: 0;
 }
 
 .hobbies-list li {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--second-color);
+  margin-bottom: var(--mb-4);
+  background-color: var(--bg-color); /* Add a background color */
 }
 
-.hobbies-list strong {
-  color: #333;
+/* Hover effect for each hobby item */
+.hobbies-list li:hover {
+  background-color: var(--first-color);
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ===== HOBBIES SECTION TITLE =====*/
+.section-title {
+  font-size: 2rem;
+  font-weight: var(--font-bold);
+  color: var(--first-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ===== HOBBIES CONTAINER =====*/
+#hobbies {
+  padding: 20px;
+  background-color: var(--bg-light-color);
+  border-radius: 8px;
+  margin-top: 40px;
+}
 
 /* ===== FOOTER =====*/
 .footer {
