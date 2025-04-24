@@ -533,7 +533,6 @@ img {
   border-radius: 0.5rem;
   border: 1.5px solid var(--second-color);
   margin-bottom: var(--mb-4);
-  background-color: var(--bg-color); /* Add a background color */
 }
 
 /* Hover effect for each hobby item */
@@ -559,6 +558,7 @@ img {
   border-radius: 8px;
   margin-top: 40px;
 }
+
 
 /* ===== FOOTER =====*/
 .footer {
