@@ -58,14 +58,14 @@ sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
 
 /*===== HOBBIES SECTION ANIMATION =====*/
 sr.reveal('#hobbies .section-title', {
-    origin: 'top',
+    origin: 'bottom',
     distance: '50px',
     duration: 1200,
     delay: 200
 });
 
 sr.reveal('#hobbies li', {
-    origin: 'bottom',
+    origin: 'top',
     distance: '40px',
     duration: 1000,
     delay: 300,
