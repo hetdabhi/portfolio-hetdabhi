@@ -42,6 +42,14 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
+sr.reveal('#hobbies .section-title, #hobbies li', {
+    origin: 'bottom',
+    distance: '50px',
+    duration: 1500,
+    delay: 200,
+    interval: 200
+});
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',
