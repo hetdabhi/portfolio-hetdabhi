@@ -57,13 +57,6 @@ sr.reveal('.home__social-icon',{ interval: 200});
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
 /*===== HOBBIES SECTION ANIMATION =====*/
-sr.reveal('#hobbies .section-title', {
-    origin: 'bottom',
-    distance: '50px',
-    duration: 1200,
-    delay: 200
-});
-
 sr.reveal('#hobbies li', {
     origin: 'top',
     distance: '40px',
@@ -71,4 +64,5 @@ sr.reveal('#hobbies li', {
     delay: 300,
     interval: 200
 });
+
 
