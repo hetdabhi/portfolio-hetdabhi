@@ -29,8 +29,10 @@
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-<!--                     <li class="nav__item"><a href="#hobbies" class="nav__link">Hobbies</a></li>   -->
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item">
+                        <button id="theme-toggle"><i class='bx bx-moon'></i></button>
+                    </li>
                 </ul>
             </div>
 
@@ -87,7 +89,7 @@
 
                 <div class="justified-text">
                     <h2 class="about__subtitle">I'm Het Dabhi</h2>
-<!--                     <p class="about__text">"A dedicated and enthusiastic <b>B.Tech Computer Science</b> student with a
+                    <!--                     <p class="about__text">"A dedicated and enthusiastic <b>B.Tech Computer Science</b> student with a
                         passion
                         for web development and software engineering". <br>
                         I thrive on building responsive and user-friendly websites, using modern technologies such as
@@ -96,27 +98,28 @@
                         manage timelines in an agile development environment. <br>
                         Skilled in version control and team collaboration using <b>Git and GitHub</b>.
                                 </p> -->
-                <p class="about__text">
-                    A dedicated and enthusiastic <b>B.Tech Computer Science</b> student with a strong passion for 
-                    <b>web development</b> and <b>software engineering</b>.
-                </p>
-                <p class="about__text">
-                    I enjoy building responsive, user-friendly websites and applications using technologies like 
-                    <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, and <b>React.js</b>.
-                </p>
-                <p class="about__text">
-                    Experienced with <b>MongoDB</b> for backend integration, and have deployed projects using 
-                    <b>Vercel</b>, <b>Render</b>, and <b>Netlify</b>.
-                </p>
-                <p class="about__text">
-                    Familiar with <b>Agile methodologies</b> — using tools like <b>Jira</b> to track tasks, report bugs, 
-                    and manage timelines efficiently.
-                </p>
-                <p class="about__text">
-                    Proficient in <b>version control</b> and team collaboration using <b>Git</b> and <b>GitHub</b>.
-                </p>
+                    <p class="about__text">
+                        A dedicated and enthusiastic <b>B.Tech Computer Science</b> student with a strong passion for
+                        <b>web development</b> and <b>software engineering</b>.
+                    </p>
+                    <p class="about__text">
+                        I enjoy building responsive, user-friendly websites and applications using technologies like
+                        <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, and <b>React.js</b>.
+                    </p>
+                    <p class="about__text">
+                        Experienced with <b>MongoDB</b> for backend integration, and have deployed projects using
+                        <b>Vercel</b>, <b>Render</b>, and <b>Netlify</b>.
+                    </p>
+                    <p class="about__text">
+                        Familiar with <b>Agile methodologies</b> — using tools like <b>Jira</b> to track tasks, report
+                        bugs,
+                        and manage timelines efficiently.
+                    </p>
+                    <p class="about__text">
+                        Proficient in <b>version control</b> and team collaboration using <b>Git</b> and <b>GitHub</b>.
+                    </p>
                 </div>
-                </div>
+            </div>
             </div>
         </section>
 
@@ -218,15 +221,18 @@
                 </a> -->
             </div>
         </section>
-        
-         <!-- ===== Hobbies  ===== -->
+
+        <!-- ===== Hobbies  ===== -->
         <section id="hobbies">
-          <h2 class="section-title">Hobbies</h2>
-          <ul class="hobbies-list">
-            <li><strong>Working on side projects:</strong> I enjoy improving my coding skills and contributing to open-source platforms.</li>
-            <li><strong>Enjoying multiplayer games:</strong> Games like BGMI and COC help me develop strategies and have fun.</li>
-            <li><strong>Listening to rap songs:</strong> I find relaxation and creative inspiration in the rhythm and lyrics of rap music.</li>
-          </ul>
+            <h2 class="section-title">Hobbies</h2>
+            <ul class="hobbies-list">
+                <li><strong>Working on side projects:</strong> I enjoy improving my coding skills and contributing to
+                    open-source platforms.</li>
+                <li><strong>Enjoying multiplayer games:</strong> Games like BGMI and COC help me develop strategies and
+                    have fun.</li>
+                <li><strong>Listening to rap songs:</strong> I find relaxation and creative inspiration in the rhythm
+                    and lyrics of rap music.</li>
+            </ul>
         </section>
 
 
@@ -280,6 +286,19 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+
+        <!-- Dark Mode Toggle Script -->
+        <script>
+            const toggleBtn = document.getElementById('theme-toggle');
+            const icon = toggleBtn.querySelector('i');
+
+            toggleBtn.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                icon.classList.toggle('bx-moon');
+                icon.classList.toggle('bx-sun');
+            });
+        </script>
+
 </body>
 
 </html>
