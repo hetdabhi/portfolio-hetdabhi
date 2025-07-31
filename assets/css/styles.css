@@ -15,12 +15,12 @@
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
   /*===== Margenes =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
-  --mb-5: 1.0rem;
+  --mb-5: 1rem;
   --mb-6: 3rem;
   /*===== z index =====*/
   --z-back: -10;
@@ -32,7 +32,7 @@
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
-    --smaller-font-size: .875rem;
+    --smaller-font-size: 0.875rem;
   }
 }
 
@@ -218,7 +218,6 @@ img {
 
 /* Styles for smaller screens */
 @media (max-width: 768px) {
-
   /* Adjust the max-width as needed */
   .home__data {
     align-self: center;
@@ -279,7 +278,7 @@ img {
   display: flex;
   /* Ensures alignment of social icons */
   flex-direction: row;
-  gap: 1.0rem;
+  gap: 1rem;
   /* Adds spacing between icons */
 
   /* Center on small screens */
@@ -292,7 +291,7 @@ img {
 
 .home__social-icon {
   width: max-content;
-  font-size: 2.0rem;
+  font-size: 2rem;
   color: var(--second-color);
   transition: transform 0.3s ease, color 0.3s ease;
   /* Smooth hover animation */
@@ -323,7 +322,6 @@ img {
 /*--------------------------------------*/
 /* Styles for smaller screens */
 @media (max-width: 768px) {
-
   /* Adjust the max-width as needed */
   .home__blob {
     display: none;
@@ -363,7 +361,6 @@ img {
 .about__img img {
   width: 200px;
   border-radius: 0.5rem;
-
 }
 
 /* ===== SKILLS =====*/
@@ -716,7 +713,7 @@ img {
   padding: 1rem;
   font-size: 1rem;
   color: #333;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .about__title {
@@ -755,7 +752,7 @@ img {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 3px;
@@ -829,10 +826,9 @@ body.dark-mode textarea::placeholder {
   color: #bbbbbb;
 }
 
-
 /* ========== DARK MODE ========== */
 body.dark-mode {
-  background-color: #1e1e1e;
+  background-color: black;
   color: white;
 }
 
@@ -844,7 +840,7 @@ body.dark-mode b {
 /* Navbar background */
 body.dark-mode .nav,
 body.dark-mode .l-header {
-  background-color: #121212;
+  background-color: black;
 }
 
 /* Navbar logo, toggle icon, links */
