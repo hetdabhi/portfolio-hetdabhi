@@ -228,7 +228,7 @@
             <ul class="hobbies-list">
                 <li><strong>Working on side projects:</strong> I enjoy improving my coding skills and contributing to
                     open-source platforms.</li>
-                <li><strong>Enjoying multiplayer games:</strong> Games like Battleground Mobile India and Clash of Clans help me develop strategies and
+                <li><strong>Enjoying multiplayer games:</strong> Games like BGMI and COC help me develop strategies and
                     have fun.</li>
                 <li><strong>Listening to rap songs:</strong> I find relaxation and creative inspiration in the rhythm
                     and lyrics of rap music.</li>
@@ -292,10 +292,25 @@
             const toggleBtn = document.getElementById('theme-toggle');
             const icon = toggleBtn.querySelector('i');
 
+            // Check for saved dark mode preference
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+                icon.classList.remove('bx-moon');
+                icon.classList.add('bx-sun');
+            }
+
             toggleBtn.addEventListener('click', () => {
+                // Toggle dark mode
                 document.body.classList.toggle('dark-mode');
                 icon.classList.toggle('bx-moon');
                 icon.classList.toggle('bx-sun');
+
+                // Save preference to localStorage
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                }
             });
         </script>
 
