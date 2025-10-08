@@ -735,63 +735,76 @@ img {
 
 /* ===== HOBBIES SECTION ===== */
 #hobbies {
-  max-width: 700px;
+  max-width: 768px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  text-align: center;
+  padding: 1rem;
 }
 
-/* Keep your blue title styling */
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--first-color);
-  /* your blue */
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: var(--first-color);
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
-}
-
-/* Style the hobbies list */
 .hobbies-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Center and box each item */
 .hobbies-list li {
-  text-align: justify;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 2px solid var(--second-color);
-  background-color: #fff;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--white-color);
+  border-radius: 0.75rem;
+  padding: 1.25rem 2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  border: none;
 }
 
-/* Hover effect */
 .hobbies-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 30px rgba(14, 36, 49, 0.15);
   background-color: var(--first-color);
   color: #fff;
 }
 
-@media (max-width: 600px) {
+.hobbies-list li strong {
+  min-width: 140px;
+  font-size: 1.1rem;
+  font-weight: var(--font-semi);
+  color: var(--first-color);
+  margin-right: 1rem;
+}
+
+.hobbies-list li:hover strong {
+  color: #fff;
+}
+
+.hobbies-list li span {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--second-color);
+}
+
+/* Dark Mode */
+body.dark-mode .hobbies-list li {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .hobbies-list li span {
+  color: #fff;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
   #hobbies {
-    padding: 2rem 1rem;
+    margin: 0 var(--mb-2);
   }
 
   .hobbies-list li {
-    font-size: 0.95rem;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+  }
+
+  .hobbies-list li strong {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -828,7 +841,7 @@ body.dark-mode textarea::placeholder {
 
 /* ========== DARK MODE ========== */
 body.dark-mode {
-  background-color: black;
+  background-color: #1e1e1e;
   color: white;
 }
 
@@ -840,7 +853,7 @@ body.dark-mode b {
 /* Navbar background */
 body.dark-mode .nav,
 body.dark-mode .l-header {
-  background-color: black;
+  background-color: #121212;
 }
 
 /* Navbar logo, toggle icon, links */
@@ -899,5 +912,83 @@ body.dark-mode .footer__icon i {
 
   body.dark-mode #theme-toggle {
     color: white;
+  }
+}
+
+/* ===== EDUCATION ===== */
+.education__container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.education__content {
+  background-color: var(--white-color);
+  border-radius: 0.75rem;
+  padding: 1.25rem 2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+}
+
+.education__content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 30px rgba(14, 36, 49, 0.15);
+}
+
+.education__icon {
+  font-size: 1.5rem;
+  color: var(--first-color);
+  margin-right: 1rem;
+  padding-top: 0.25rem;
+}
+
+.education__data {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.education__title {
+  font-size: 1.1rem;
+  font-weight: var(--font-semi);
+  color: var(--first-color);
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.education__institute {
+  font-size: 0.9rem;
+  color: var(--second-color);
+  margin-bottom: 0.25rem;
+}
+
+.education__year {
+  display: inline-block;
+  background-color: rgba(64, 112, 244, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  color: var(--first-color);
+}
+
+/* Dark Mode */
+body.dark-mode .education__content {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .education__institute {
+  color: #fff;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .education__container {
+    margin: 0 var(--mb-2);
+  }
+
+  .education__content {
+    padding: 1rem 1.5rem;
   }
 }
