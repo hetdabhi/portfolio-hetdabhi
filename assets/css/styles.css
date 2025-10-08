@@ -475,60 +475,92 @@ img {
 }
 
 /* ===== CONTACT =====*/
+.contact__container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 .contact__input {
   width: 100%;
+  font-family: "Poppins", sans-serif; /* Added Poppins font */
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   border: 1.5px solid var(--second-color);
   outline: none;
   margin-bottom: var(--mb-4);
+  transition: all 0.3s ease;
+}
+
+.contact__input::placeholder {
+  font-family: "Poppins", sans-serif; /* Added Poppins font for placeholders */
+  color: #666666;
 }
 
 .contact__button {
-  display: block;
+  font-family: "Poppins", sans-serif; /* Added Poppins font */
+  display: inline-block;
+  padding: 1rem 2rem;
   border: none;
   outline: none;
   font-size: var(--normal-font-size);
   cursor: pointer;
-  margin-left: auto;
+  background-color: var(--first-color);
+  color: #fff;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.contact__button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 30px rgba(14, 36, 49, 0.15);
+}
+
+/* Dark Mode */
+body.dark-mode .contact__input {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-color: #4d90fe;
+}
+
+body.dark-mode .contact__input::placeholder {
+  color: #bbbbbb;
 }
 
 /* ===== SUBMIT BUTTON =====*/
 .submit-container {
   display: flex;
-  /* Use Flexbox */
   justify-content: center;
-  /* Center the button horizontally */
   align-items: center;
-  /* Center the button vertically (if needed) */
-  margin-top: 20px;
-  /* Optional: Add some space above the button */
+  margin-top: 1rem; /* Reduced from 20px to 1rem */
 }
 
 .contact__button {
-  padding: 10px 20px;
-  /* Add padding for better appearance */
-  font-size: 1rem;
-  /* Set font size */
+  padding: 0.75rem 2rem;
+  font-size: var(--normal-font-size);
   color: #fff;
-  /* Text color */
   background-color: var(--first-color);
-  /* Background color */
   border: none;
-  /* Remove default border */
-  border-radius: 5px;
-  /* Rounded corners */
+  border-radius: 0.75rem;
   cursor: pointer;
-  /* Change cursor on hover */
-  transition: background-color 0.3s ease;
-  /* Smooth background color transition */
+  transition: all 0.3s ease;
 }
 
 .contact__button:hover {
-  background-color: var(--second-color);
-  /* Change background color on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 30px rgba(14, 36, 49, 0.15);
+}
+
+/* Adjust the margin of the last contact input */
+.contact__input:last-of-type {
+  margin-bottom: 1rem; /* Reduced from var(--mb-4) */
+}
+
+/* Dark Mode */
+body.dark-mode .contact__button:hover {
+  background-color: var(--first-color);
 }
 
 /* ===== FOOTER =====*/
@@ -755,14 +787,33 @@ img {
   transition: all 0.3s ease;
   display: flex;
   align-items: flex-start;
-  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.hobbies-list li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(64, 112, 244, 0.1),
+    transparent
+  );
+  transition: 0.5s;
 }
 
 .hobbies-list li:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 30px rgba(14, 36, 49, 0.15);
-  background-color: var(--first-color);
-  color: #fff;
+}
+
+.hobbies-list li:hover::before {
+  left: 100%;
 }
 
 .hobbies-list li strong {
@@ -771,27 +822,69 @@ img {
   font-weight: var(--font-semi);
   color: var(--first-color);
   margin-right: 1rem;
-}
-
-.hobbies-list li:hover strong {
-  color: #fff;
+  transition: color 0.3s ease;
 }
 
 .hobbies-list li span {
   flex: 1;
   font-size: 0.9rem;
   color: var(--second-color);
+  transition: color 0.3s ease;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.5;
+  hyphens: auto;
+}
+
+.hobbies-list li:hover strong,
+.hobbies-list li:hover span {
+  color: var(--first-color);
 }
 
 /* Dark Mode */
 body.dark-mode .hobbies-list li {
   background-color: #2a2a2a;
+  border: none;
 }
 
 body.dark-mode .hobbies-list li span {
   color: #fff;
 }
 
+.hobby-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hobby-content strong {
+    font-size: 1.1rem;
+    font-weight: var(--font-semi);
+    color: var(--first-color);
+    transition: color 0.3s ease;
+}
+
+.hobby-content span {
+    font-size: 0.9rem;
+    color: var(--second-color);
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.hobbies-list li:hover .hobby-content strong {
+    color: var(--first-color);
+}
+
+.hobbies-list li:hover .hobby-content span {
+    color: var(--first-color);
+}
+
+@media screen and (max-width: 768px) {
+    .hobby-content {
+        gap: 0.35rem;
+    }
+}
 /* Media Queries */
 @media screen and (max-width: 768px) {
   #hobbies {
@@ -806,37 +899,10 @@ body.dark-mode .hobbies-list li span {
   .hobbies-list li strong {
     margin-bottom: 0.5rem;
   }
-}
 
-/* ==== DARK MODE: HOBBIES SECTION ==== */
-body.dark-mode .hobbies-list li {
-  background-color: #2a2a2a;
-  color: white;
-  border: 2px solid #444;
-}
-
-/* Optional: hover effect in dark mode */
-body.dark-mode .hobbies-list li:hover {
-  background-color: var(--first-color);
-  /* your blue */
-  color: white;
-}
-
-/* Dark Mode Input Field Styles */
-body.dark-mode .contact__input,
-body.dark-mode textarea {
-  background-color: #2c2c2c;
-  /* soft dark background */
-  color: white;
-  /* white text */
-  border: 1.5px solid #4d90fe;
-  /* blue border */
-}
-
-/* Optional: Dark mode placeholder color */
-body.dark-mode .contact__input::placeholder,
-body.dark-mode textarea::placeholder {
-  color: #bbbbbb;
+  .hobbies-list li span {
+    text-align: left; /* For better readability on mobile */
+  }
 }
 
 /* ========== DARK MODE ========== */
@@ -931,6 +997,25 @@ body.dark-mode .footer__icon i {
   transition: all 0.3s ease;
   display: flex;
   align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.education__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(64, 112, 244, 0.1),
+    transparent
+  );
+  transition: 0.5s;
 }
 
 .education__content:hover {
@@ -938,11 +1023,26 @@ body.dark-mode .footer__icon i {
   box-shadow: 0 6px 30px rgba(14, 36, 49, 0.15);
 }
 
+.education__content:hover::before {
+  left: 100%;
+}
+
+.education__content:hover .education__icon {
+  transform: scale(1.2);
+  color: var(--first-color);
+}
+
+.education__content:hover .education__year {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
 .education__icon {
   font-size: 1.5rem;
   color: var(--first-color);
   margin-right: 1rem;
   padding-top: 0.25rem;
+  transition: all 0.3s ease;
 }
 
 .education__data {
@@ -956,12 +1056,14 @@ body.dark-mode .footer__icon i {
   color: var(--first-color);
   margin-bottom: 0.35rem;
   line-height: 1.2;
+  transition: color 0.3s ease;
 }
 
 .education__institute {
   font-size: 0.9rem;
   color: var(--second-color);
   margin-bottom: 0.25rem;
+  transition: color 0.3s ease;
 }
 
 .education__year {
@@ -971,6 +1073,7 @@ body.dark-mode .footer__icon i {
   border-radius: 1rem;
   font-size: 0.8rem;
   color: var(--first-color);
+  transition: all 0.3s ease;
 }
 
 /* Dark Mode */
@@ -982,6 +1085,7 @@ body.dark-mode .education__institute {
   color: #fff;
 }
 
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
   .education__container {
@@ -992,3 +1096,4 @@ body.dark-mode .education__institute {
     padding: 1rem 1.5rem;
   }
 }
+
