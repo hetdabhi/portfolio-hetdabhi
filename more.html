@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Portfolio</title>
+
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="index.html" class="nav__logo">Portfolio</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="index.html#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="index.html#project" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="index.html#education" class="nav__link">Education</a></li>
+                    <li class="nav__item"><a href="index.html#hobbies" class="nav__link">Hobbies</a></li>
+                    <li class="nav__item"><a href="more.html" class="nav__link active-link">More</a></li>
+                    <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item">
+                        <button id="theme-toggle"><i class='bx bx-moon'></i></button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== CERTIFICATES =====-->
+        <section class="certificates section" id="certificates">
+            <h2 class="section-title">Certificates</h2>
+
+            <div class="certificates__container bd-grid">
+                <!-- Certificate Card 1 -->
+                <div class="certificates__card"
+                    onclick="window.open('assets/img/certificates/certificate1.jpg', '_blank')"
+                    style="cursor: pointer;">
+                    <div class="certificates__image">
+                        <img src="assets/img/certificates/certificate1.jpg" alt="Discovering Entrepreneurship">
+                        <div class="certificates__overlay">
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                    </div>
+                    <div class="certificates__info">
+                        <h3 class="certificates__title">Discovering Entrepreneurship</h3>
+                        <p class="certificates__issuer">Issued by: Cisco Networking Academy</p>
+                        <span class="certificates__date">September 2025</span>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 2 -->
+                <div class="certificates__card"
+                    onclick="window.open('assets/img/certificates/certificate2.jpg', '_blank')"
+                    style="cursor: pointer;">
+                    <div class="certificates__image">
+                        <img src="assets/img/certificates/certificate2.jpg" alt="Networking Essentials">
+                        <div class="certificates__overlay">
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                    </div>
+                    <div class="certificates__info">
+                        <h3 class="certificates__title">Networking Essentials</h3>
+                        <p class="certificates__issuer">Issued by: Cisco Networking Academy</p>
+                        <span class="certificates__date">June 2024</span>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 3 -->
+                <!-- <div class="certificates__card">
+                    <div class="certificates__image">
+                        <img src="assets/img/certificate3.png" alt="Certificate Name">
+                        <div class="certificates__overlay">
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                    </div>
+                    <div class="certificates__info">
+                        <h3 class="certificates__title">React Development</h3>
+                        <p class="certificates__issuer">Issued by: Udemy</p>
+                        <span class="certificates__date">November 2023</span>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+
+        <!--===== BLOG =====-->
+        <!-- <section class="blog section" id="blog">
+            <h2 class="section-title">Blog</h2>
+
+            <div class="blog__container bd-grid">
+                <!-- Blog Post Card 1 -->
+        <!-- <article class="blog__card">
+                    <div class="blog__image">
+                        <img src="assets/img/blog1.png" alt="Blog Post Title">
+                        <span class="blog__category">Web Development</span>
+                    </div>
+                    <div class="blog__content">
+                        <h3 class="blog__title">Getting Started with React</h3>
+                        <p class="blog__description">Learn the fundamentals of React and how to build modern web
+                            applications with this powerful JavaScript library...</p>
+                        <div class="blog__meta">
+                            <span class="blog__date">
+                                <i class='bx bx-calendar'></i> Jan 15, 2024
+                            </span>
+                            <span class="blog__read-time">
+                                <i class='bx bx-time'></i> 5 min read
+                            </span>
+                        </div>
+                        <a href="#" class="blog__link">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </article> -->
+
+        <!-- Blog Post Card 2 -->
+        <!-- <article class="blog__card">
+                    <div class="blog__image">
+                        <img src="assets/img/blog2.png" alt="Blog Post Title">
+                        <span class="blog__category">CSS</span>
+                    </div>
+                    <div class="blog__content">
+                        <h3 class="blog__title">Modern CSS Techniques</h3>
+                        <p class="blog__description">Explore the latest CSS features and techniques to create stunning,
+                            responsive designs for your web projects...</p>
+                        <div class="blog__meta">
+                            <span class="blog__date">
+                                <i class='bx bx-calendar'></i> Jan 10, 2024
+                            </span>
+                            <span class="blog__read-time">
+                                <i class='bx bx-time'></i> 7 min read
+                            </span>
+                        </div>
+                        <a href="#" class="blog__link">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </article> -->
+
+        <!-- Blog Post Card 3 -->
+        <!-- <article class="blog__card">
+                    <div class="blog__image">
+                        <img src="assets/img/blog3.png" alt="Blog Post Title">
+                        <span class="blog__category">JavaScript</span>
+                    </div>
+                    <div class="blog__content">
+                        <h3 class="blog__title">JavaScript Best Practices</h3>
+                        <p class="blog__description">Discover essential JavaScript best practices that will help you
+                            write cleaner, more efficient code...</p>
+                        <div class="blog__meta">
+                            <span class="blog__date">
+                                <i class='bx bx-calendar'></i> Jan 5, 2024
+                            </span>
+                            <span class="blog__read-time">
+                                <i class='bx bx-time'></i> 6 min read
+                            </span>
+                        </div>
+                        <a href="#" class="blog__link">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </article>
+            </div>
+        </section> -->
+
+        <!--===== LANGUAGES =====-->
+        <section class="languages section" id="languages">
+            <h2 class="section-title">Languages & Technologies</h2>
+
+            <div class="languages__container bd-grid">
+                <!-- Language Card 1 -->
+                <div class="languages__card">
+                    <div class="languages__icon">
+                        <i class='bx bxl-javascript'></i>
+                    </div>
+                    <h3 class="languages__name">JavaScript</h3>
+                    <div class="languages__level">
+                        <span class="languages__bar" style="width: 85%"></span>
+                    </div>
+                </div>
+
+                <!-- Language Card 2 -->
+                <div class="languages__card">
+                    <div class="languages__icon">
+                        <i class='bx bx-coffee'></i>
+                    </div>
+                    <h3 class="languages__name">Java</h3>
+                    <div class="languages__level">
+                        <span class="languages__bar" style="width: 70%"></span>
+                    </div>
+                </div>
+
+                <!-- Language Card 3 -->
+                <div class="languages__card">
+                    <div class="languages__icon">
+                        <i class='bx bxl-react'></i>
+                    </div>
+                    <h3 class="languages__name">React</h3>
+                    <div class="languages__level">
+                        <span class="languages__bar" style="width: 80%"></span>
+                    </div>
+                </div>
+
+                <!-- Language Card 4 -->
+                <div class="languages__card">
+                    <div class="languages__icon">
+                        <i class='bx bxl-html5'></i>
+                    </div>
+                    <h3 class="languages__name">HTML5</h3>
+                    <div class="languages__level">
+                        <span class="languages__bar" style="width: 95%"></span>
+                    </div>
+                </div>
+
+                <!-- Language Card 5 -->
+                <div class="languages__card">
+                    <div class="languages__icon">
+                        <i class='bx bxl-css3'></i>
+                    </div>
+                    <h3 class="languages__name">CSS3</h3>
+                    <div class="languages__level">
+                        <span class="languages__bar" style="width: 90%"></span>
+                    </div>
+                </div>
+
+                <!-- Language Card 6 -->
+                <div class="languages__card">
+                    <div class="languages__icon">
+                        <i class='bx bxl-nodejs'></i>
+                    </div>
+                    <h3 class="languages__name">Node.js</h3>
+                    <div class="languages__level">
+                        <span class="languages__bar" style="width: 70%"></span>
+                    </div>
+                </div>
+
+                <!-- Language Card 7 -->
+                <div class="languages__card">
+                    <div class="languages__icon">
+                        <i class='bx bx-data'></i>
+                    </div>
+                    <h3 class="languages__name">MongoDB</h3>
+                    <div class="languages__level">
+                        <span class="languages__bar" style="width: 65%"></span>
+                    </div>
+                </div>
+
+                <!-- Language Card 8 -->
+                <div class="languages__card">
+                    <div class="languages__icon">
+                        <i class='bx bxl-git'></i>
+                    </div>
+                    <h3 class="languages__name">Git</h3>
+                    <div class="languages__level">
+                        <span class="languages__bar" style="width: 80%"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== GAMING =====-->
+        <section class="gaming section" id="gaming">
+            <h2 class="section-title">Gaming</h2>
+
+            <div class="gaming__container bd-grid">
+                <!-- BGMI Profile Card -->
+                <div class="gaming__card">
+                    <div class="gaming__header">
+                        <i class='bx bx-joystick gaming__logo'></i>
+                        <h3 class="gaming__game-name">BGMI</h3>
+                    </div>
+                    <div class="gaming__content">
+                        <div class="gaming__id-section">
+                            <span class="gaming__label">Player ID:</span>
+                            <div class="gaming__id-wrapper">
+                                <span class="gaming__id" id="bgmi-id">5921858458</span>
+                                <button class="gaming__copy-btn" data-id="bgmi-id">
+                                    <i class='bx bx-copy'></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gaming__stats">
+                            <div class="gaming__stat-item">
+                                <span class="gaming__stat-label">Rank:</span>
+                                <span class="gaming__stat-value">Conqueror</span>
+                            </div>
+                            <div class="gaming__stat-item">
+                                <span class="gaming__stat-label">Level:</span>
+                                <span class="gaming__stat-value">80</span>
+                            </div>
+                        </div>
+                        <!-- <div class="gaming__image">
+                            <img src="assets/img/bgmi-screenshot.png" alt="BGMI Gameplay">
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- COC Profile Card -->
+                <div class="gaming__card">
+                    <div class="gaming__header">
+                        <i class='bx bx-game gaming__logo'></i>
+                        <h3 class="gaming__game-name">Clash of Clans</h3>
+                    </div>
+                    <div class="gaming__content">
+                        <div class="gaming__id-section">
+                            <span class="gaming__label">Player Tag:</span>
+                            <div class="gaming__id-wrapper">
+                                <span class="gaming__id" id="coc-id">99VCUJY9J</span>
+                                <button class="gaming__copy-btn" data-id="coc-id">
+                                    <i class='bx bx-copy'></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gaming__stats">
+                            <div class="gaming__stat-item">
+                                <span class="gaming__stat-label">Town Hall:</span>
+                                <span class="gaming__stat-value">15</span>
+                            </div>
+                            <div class="gaming__stat-item">
+                                <span class="gaming__stat-label">Rank:</span>
+                                <span class="gaming__stat-value">Legend</span>
+                            </div>
+                        </div>
+                        <!-- <div class="gaming__image">
+                            <img src="assets/img/coc-screenshot.png" alt="COC Base">
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Mobile Legends Profile Card -->
+                <div class="gaming__card">
+                    <div class="gaming__header">
+                        <i class='bx bx-shield gaming__logo'></i>
+                        <h3 class="gaming__game-name">Mobile Legends</h3>
+                    </div>
+                    <div class="gaming__content">
+                        <div class="gaming__id-section">
+                            <span class="gaming__label">Player ID:</span>
+                            <div class="gaming__id-wrapper">
+                                <span class="gaming__id" id="ml-id">1900175066 (18764)</span>
+                                <button class="gaming__copy-btn" data-id="ml-id">
+                                    <i class='bx bx-copy'></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gaming__stats">
+                            <div class="gaming__stat-item">
+                                <span class="gaming__stat-label">Rank:</span>
+                                <span class="gaming__stat-value">Epic</span>
+                            </div>
+                            <div class="gaming__stat-item">
+                                <span class="gaming__stat-label">Level:</span>
+                                <span class="gaming__stat-value">30</span>
+                            </div>
+                        </div>
+                        <!-- <div class="gaming__image">
+                            <img src="assets/img/ml-screenshot.png" alt="Mobile Legends Gameplay">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Het Dabhi</p>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/share/15k57e4LAU/" class="footer__icon"><i
+                        class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/het__dabhi?igsh=MXg0MHJ3OG95OHQwNg==" class="footer__icon"><i
+                        class='bx bxl-instagram'></i></a>
+                <a href="https://x.com/hetdabhi333?s=11" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <p class="footer__copy">God's Favourite Child</p>
+        </footer>
+
+    </main>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const icon = toggleBtn.querySelector('i');
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            icon.classList.remove('bx-moon');
+            icon.classList.add('bx-sun');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            // Toggle dark mode
+            document.body.classList.toggle('dark-mode');
+            icon.classList.toggle('bx-moon');
+            icon.classList.toggle('bx-sun');
+
+            // Save preference to localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+
+    <!-- Gaming Copy Functionality -->
+    <script>
+        // Copy to clipboard functionality for gaming IDs
+        document.querySelectorAll('.gaming__copy-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-id');
+                const textToCopy = document.getElementById(targetId).textContent;
+
+                // Copy to clipboard
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    // Change icon to check mark
+                    const icon = this.querySelector('i');
+                    const originalClass = icon.className;
+                    icon.className = 'bx bx-check';
+                    this.classList.add('copied');
+
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        icon.className = originalClass;
+                        this.classList.remove('copied');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
