@@ -223,14 +223,13 @@
 
 
 
-    <!-- Dark Mode Toggle Script - Fixed -->
+    <!-- Dark Mode Toggle Script -->
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
         const icon = toggleBtn.querySelector('i');
 
-        // Check for saved dark mode preference using the same keys as main site
-        const savedTheme = localStorage.getItem('selected-theme');
-        if (savedTheme === 'dark') {
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
             document.body.classList.add('dark-mode');
             icon.classList.remove('bx-moon');
             icon.classList.add('bx-sun');
@@ -242,13 +241,11 @@
             icon.classList.toggle('bx-moon');
             icon.classList.toggle('bx-sun');
 
-            // Save preference using the same keys as main site
+            // Save preference to localStorage
             if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('selected-theme', 'dark');
-                localStorage.setItem('selected-icon', 'bx-moon');
+                localStorage.setItem('darkMode', 'enabled');
             } else {
-                localStorage.setItem('selected-theme', 'light');
-                localStorage.setItem('selected-icon', 'bx-sun');
+                localStorage.setItem('darkMode', 'disabled');
             }
         });
     </script>
