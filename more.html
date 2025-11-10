@@ -404,51 +404,41 @@
 
     <!--===== SCROLL REVEAL ANIMATIONS FOR MORE.HTML =====-->
     <script>
-        // Initialize ScrollReveal immediately (no wrapper)
+        // Initialize ScrollReveal - top to bottom animation
         const srMore = ScrollReveal({
             origin: 'top',
             distance: '60px',
-            duration: 1000,
-            delay: 0,
-            reset: false,
-            viewFactor: 0.1,
-            mobile: true,
-            opacity: 0
+            duration: 2000,
+            delay: 200,
+            reset: false
         });
 
-        // Animate section titles FIRST - fast load
-        srMore.reveal('.section-title', {
-            origin: 'top',
-            distance: '30px',
-            duration: 600,
-            delay: 100,
-            interval: 100
-        });
+        // NO animation for section titles - they appear immediately without effect
 
-        // Animate certificates section - cards appear AFTER title
+        // Animate certificates cards - top to bottom
         srMore.reveal('.certificates__card', {
             origin: 'top',
-            distance: '50px',
+            distance: '40px',
             duration: 1000,
-            delay: 500,
+            delay: 300,
             interval: 200
         });
 
-        // Animate languages section - cards appear AFTER title
+        // Animate languages cards - top to bottom
         srMore.reveal('.languages__card', {
             origin: 'top',
-            distance: '50px',
+            distance: '40px',
             duration: 1000,
-            delay: 500,
-            interval: 150
+            delay: 300,
+            interval: 200
         });
 
-        // Animate gaming section - cards appear AFTER title
+        // Animate gaming cards - top to bottom
         srMore.reveal('.gaming__card', {
             origin: 'top',
-            distance: '50px',
+            distance: '40px',
             duration: 1000,
-            delay: 500,
+            delay: 300,
             interval: 200
         });
     </script>
