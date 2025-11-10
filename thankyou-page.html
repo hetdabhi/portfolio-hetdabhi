@@ -232,10 +232,26 @@
         <p class="footer__copy">God's Favourite Child</p>
     </footer>
 
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
 
+    <!--===== SCROLL REVEAL ANIMATIONS =====-->
+    <script>
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 1500,
+            delay: 200,
+        });
 
+        sr.reveal('.thankyou-icon', { delay: 300 });
+        sr.reveal('.thankyou-title', { delay: 400 });
+        sr.reveal('.thankyou-text', { delay: 500 });
+        sr.reveal('.thankyou-buttons', { delay: 600 });
+    </script>
 
     <!-- Dark Mode Toggle Script -->
     <script>

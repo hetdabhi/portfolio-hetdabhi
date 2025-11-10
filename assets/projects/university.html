@@ -304,6 +304,100 @@
     <!--===== MAIN JS =====-->
     <script src="../js/main.js"></script>
 
+    <!--===== SCROLL REVEAL ANIMATIONS =====-->
+    <script>
+        const srProject = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 1500,
+            delay: 200,
+        });
+
+        // Header section
+        srProject.reveal('.project-detail__header', { delay: 100 });
+        srProject.reveal('.project-detail__title', { delay: 200 });
+        srProject.reveal('.project-detail__subtitle', { delay: 300 });
+        srProject.reveal('.project-detail__links', { delay: 400 });
+
+        // Video section
+        srProject.reveal('.project-detail__video', { delay: 200 });
+        srProject.reveal('.project-detail__video-wrapper', { delay: 300 });
+
+        // Description section
+        srProject.reveal('.project-detail__description', { delay: 200 });
+
+        // Section titles
+        srProject.reveal('.project-detail__section-title', {
+            origin: 'top',
+            distance: '40px',
+            duration: 1000,
+            interval: 200
+        });
+
+        // Text paragraphs
+        srProject.reveal('.project-detail__text', {
+            origin: 'top',
+            distance: '30px',
+            duration: 1000,
+            interval: 150
+        });
+
+        // Tech section
+        srProject.reveal('.project-detail__tech', { delay: 200 });
+        srProject.reveal('.project-detail__tech-grid', { delay: 300 });
+        srProject.reveal('.project-detail__tech-item', {
+            origin: 'top',
+            distance: '40px',
+            duration: 1000,
+            interval: 100
+        });
+
+        // Features section
+        srProject.reveal('.project-detail__features', { delay: 200 });
+        srProject.reveal('.project-detail__features-list', { delay: 300 });
+        srProject.reveal('.project-detail__feature-item', {
+            origin: 'top',
+            distance: '40px',
+            duration: 1000,
+            interval: 150
+        });
+
+        // Gallery section
+        srProject.reveal('.project-detail__gallery', { delay: 200 });
+        srProject.reveal('.project-detail__gallery-grid', { delay: 300 });
+        srProject.reveal('.project-detail__gallery-item', {
+            origin: 'top',
+            distance: '40px',
+            duration: 1000,
+            interval: 200
+        });
+
+        // Challenges section
+        srProject.reveal('.project-detail__challenges', { delay: 200 });
+        srProject.reveal('.project-detail__challenge-item', {
+            origin: 'top',
+            distance: '40px',
+            duration: 1000,
+            interval: 200
+        });
+        srProject.reveal('.project-detail__challenge-title', {
+            origin: 'top',
+            distance: '30px',
+            duration: 1000,
+            interval: 200
+        });
+
+        // Learned section
+        srProject.reveal('.project-detail__learned', { delay: 200 });
+        srProject.reveal('.project-detail__learned-list', { delay: 300 });
+        srProject.reveal('.project-detail__learned-list li', {
+            origin: 'top',
+            distance: '30px',
+            duration: 1000,
+            interval: 150
+        });
+    </script>
+
     <!-- Dark Mode Toggle Script -->
     <script>
         const toggleBtn = document.getElementById('theme-toggle');

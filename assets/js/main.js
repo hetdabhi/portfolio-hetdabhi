@@ -190,6 +190,14 @@ const sr = ScrollReveal({
     // reset: true          // Uncomment to repeat animations on scroll
 });
 
+// Reveal all section titles
+sr.reveal('.section-title', {
+    origin: 'top',
+    distance: '40px',
+    duration: 1000,
+    delay: 100
+});
+
 // Reveal home, about, and skills sections
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {});
 
@@ -201,6 +209,22 @@ sr.reveal('.home__social-icon', { interval: 200 });
 
 // Reveal skills data, work items, and contact inputs with interval
 sr.reveal('.skills__data, .work__img, .contact__input', { interval: 200 });
+
+// Reveal project gallery items
+sr.reveal('.project-detail__gallery-item', {
+    origin: 'top',
+    distance: '40px',
+    duration: 1000,
+    interval: 200
+});
+
+// Reveal contact form
+sr.reveal('.contact__container', {
+    origin: 'top',
+    distance: '50px',
+    duration: 1200,
+    delay: 200
+});
 
 // Reveal education content with custom settings
 sr.reveal('.education__content', {
