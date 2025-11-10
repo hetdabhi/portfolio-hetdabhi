@@ -489,22 +489,18 @@ body.dark-mode .nav__dropdown-link:hover {
 .home {
   position: relative;
   row-gap: 5rem;
-  padding: 4rem 0 5rem;
-  min-height: calc(100vh - var(--header-height));
-  display: flex;
-  align-items: center;
+  padding: 4rem 0 2rem;
 }
 
 /* Default styles for larger screens */
 .home__data {
-  align-self: flex-start;
-  z-index: 1;
+  align-self: center;
 }
 
 /* Styles for smaller screens */
 @media (max-width: 768px) {
   .home {
-    padding: 3rem 0 4rem;
+    padding: 3rem 0 2rem;
     min-height: auto;
     row-gap: 3rem;
   }
@@ -1151,6 +1147,7 @@ body.dark-mode .contact__button:hover {
   .home__img {
     width: 300px;
     bottom: 25%;
+
   }
 
   .about__container {
