@@ -2,15 +2,20 @@
 <html lang="en">
 
 <head>
+    <!-- Meta Tags for Character Set and Responsive Design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Stylesheet Link -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 
-    <!-- =====BOX ICONS===== -->
+    <!-- BoxIcons CDN for Icon Library -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
+    <!-- Page Title -->
     <title>Portfolio</title>
 
 </head>
@@ -175,12 +180,15 @@
             </div>
         </section> -->
 
-        <!--===== LANGUAGES =====-->
+        <!--===== LANGUAGES & TECHNOLOGIES SECTION =====-->
         <section class="languages section" id="languages">
+            <!-- Section Title -->
             <h2 class="section-title">Languages & Technologies</h2>
 
+            <!-- Languages Container -->
             <div class="languages__container bd-grid">
-                <!-- Language Card 1 -->
+
+                <!-- JavaScript Card -->
                 <div class="languages__card">
                     <div class="languages__icon">
                         <i class='bx bxl-javascript'></i>
@@ -191,7 +199,7 @@
                     </div>
                 </div>
 
-                <!-- Language Card 2 -->
+                <!-- Java Card -->
                 <div class="languages__card">
                     <div class="languages__icon">
                         <i class='bx bx-coffee'></i>
@@ -202,7 +210,7 @@
                     </div>
                 </div>
 
-                <!-- Language Card 3 -->
+                <!-- React Card -->
                 <div class="languages__card">
                     <div class="languages__icon">
                         <i class='bx bxl-react'></i>
@@ -213,7 +221,7 @@
                     </div>
                 </div>
 
-                <!-- Language Card 4 -->
+                <!-- HTML5 Card -->
                 <div class="languages__card">
                     <div class="languages__icon">
                         <i class='bx bxl-html5'></i>
@@ -224,7 +232,7 @@
                     </div>
                 </div>
 
-                <!-- Language Card 5 -->
+                <!-- CSS3 Card -->
                 <div class="languages__card">
                     <div class="languages__icon">
                         <i class='bx bxl-css3'></i>
@@ -235,7 +243,7 @@
                     </div>
                 </div>
 
-                <!-- Language Card 6 -->
+                <!-- Node.js Card -->
                 <div class="languages__card">
                     <div class="languages__icon">
                         <i class='bx bxl-nodejs'></i>
@@ -246,7 +254,7 @@
                     </div>
                 </div>
 
-                <!-- Language Card 7 -->
+                <!-- MongoDB Card -->
                 <div class="languages__card">
                     <div class="languages__icon">
                         <i class='bx bx-data'></i>
@@ -257,7 +265,7 @@
                     </div>
                 </div>
 
-                <!-- Language Card 8 -->
+                <!-- Git Card -->
                 <div class="languages__card">
                     <div class="languages__icon">
                         <i class='bx bxl-git'></i>
@@ -373,20 +381,20 @@
             </div>
         </section>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Het Dabhi</p>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/share/15k57e4LAU/" class="footer__icon"><i
-                        class='bx bxl-facebook'></i></a>
-                <a href="https://www.instagram.com/het__dabhi?igsh=MXg0MHJ3OG95OHQwNg==" class="footer__icon"><i
-                        class='bx bxl-instagram'></i></a>
-                <a href="https://x.com/hetdabhi333?s=11" class="footer__icon"><i class='bx bxl-twitter'></i></a>
-            </div>
-            <p class="footer__copy">God's Favourite Child</p>
-        </footer>
-
     </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Het Dabhi</p>
+        <div class="footer__social">
+            <a href="https://www.facebook.com/share/15k57e4LAU/" class="footer__icon"><i
+                    class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/het__dabhi?igsh=MXg0MHJ3OG95OHQwNg==" class="footer__icon"><i
+                    class='bx bxl-instagram'></i></a>
+            <a href="https://x.com/hetdabhi333?s=11" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+        </div>
+        <p class="footer__copy">God's Favourite Child</p>
+    </footer>
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -421,28 +429,35 @@
         });
     </script>
 
-    <!-- Gaming Copy Functionality -->
+    <!--===== GAMING ID COPY FUNCTIONALITY =====-->
     <script>
-        // Copy to clipboard functionality for gaming IDs
+        /**
+         * Copy to clipboard functionality for gaming IDs
+         * Provides visual feedback when ID is copied
+         */
         document.querySelectorAll('.gaming__copy-btn').forEach(button => {
             button.addEventListener('click', function () {
+                // Get the target ID element
                 const targetId = this.getAttribute('data-id');
                 const textToCopy = document.getElementById(targetId).textContent;
 
-                // Copy to clipboard
+                // Copy text to clipboard using Clipboard API
                 navigator.clipboard.writeText(textToCopy).then(() => {
-                    // Change icon to check mark
+                    // Get icon element
                     const icon = this.querySelector('i');
                     const originalClass = icon.className;
+
+                    // Change icon to check mark for visual feedback
                     icon.className = 'bx bx-check';
                     this.classList.add('copied');
 
-                    // Reset after 2 seconds
+                    // Reset icon after 2 seconds
                     setTimeout(() => {
                         icon.className = originalClass;
                         this.classList.remove('copied');
                     }, 2000);
                 }).catch(err => {
+                    // Log error if copy fails
                     console.error('Failed to copy: ', err);
                 });
             });

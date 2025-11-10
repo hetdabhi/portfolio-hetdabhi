@@ -1,32 +1,66 @@
+/*==========================================
+  PORTFOLIO WEBSITE STYLESHEET
+  Author: Het Dabhi
+  Description: Main stylesheet for personal portfolio website
+  
+  TABLE OF CONTENTS:
+  1. Google Fonts Import
+  2. CSS Variables
+  3. Base Styles
+  4. Layout & Grid
+  5. Navigation
+  6. Home Section
+  7. About Section
+  8. Skills Section
+  9. Work/Projects Section
+  10. Education Section
+  11. Hobbies Section
+  12. Contact Section
+  13. Footer
+  14. Dark Mode Styles
+  15. Media Queries
+==========================================*/
+
 /*===== GOOGLE FONTS =====*/
+/* Import Poppins font family from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-/*===== VARIABLES CSS =====*/
+/*===== CSS VARIABLES =====*/
+/* Define reusable CSS custom properties for consistent styling */
 :root {
+  /* Layout Variables */
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
-  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-  /* HSL color mode */
+
+  /*===== Color Variables =====*/
+  /* Color options: Purple 260 - Red 355 - Blue 224 - Pink 340 */
+  /* Using HSL color mode for easy customization */
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
+  /* Primary brand color */
   --second-color: hsl(var(--hue-color), 56%, 12%);
-  /*===== Fuente y tipografia =====*/
+  /* Secondary/text color */
+
+  /*===== Typography Variables =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
   --smaller-font-size: 0.75rem;
-  /*===== Margenes =====*/
+
+  /*===== Spacing Variables =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 1rem;
   --mb-6: 3rem;
-  /*===== z index =====*/
+
+  /*===== Z-Index Variables =====*/
   --z-back: -10;
   --z-fixed: 100;
 }
 
+/*===== RESPONSIVE TYPOGRAPHY =====*/
+/* Adjust font sizes for larger screens (desktop) */
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3.5rem;
@@ -36,23 +70,53 @@
   }
 }
 
-/*===== BASE =====*/
+/*==========================================
+  BASE STYLES
+  Reset and foundational styles
+==========================================*/
+
+/* Universal box-sizing reset */
 *,
 ::before,
 ::after {
   box-sizing: border-box;
 }
 
+/* HTML root element configuration */
 html {
   scroll-behavior: smooth;
+  /* Smooth scrolling for anchor links */
   scroll-padding-top: calc(var(--header-height) + 1rem);
+  /* Offset for fixed header */
+  height: 100%;
+  min-height: 100%;
 }
 
+/* Body element configuration */
 body {
   margin: var(--header-height) 0 0 0;
+  /* Top margin for fixed header */
   font-family: var(--body-font);
+  /* Apply Poppins font */
   font-size: var(--normal-font-size);
+  /* Base font size */
   color: var(--second-color);
+  /* Default text color */
+  min-height: 100vh;
+  /* Full viewport height */
+  display: flex;
+  /* Flexbox for sticky footer */
+  flex-direction: column;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll */
+}
+
+.l-main {
+  flex: 1;
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 h1,
@@ -77,7 +141,12 @@ img {
   display: block;
 }
 
-/*===== CLASS CSS ===== */
+/*==========================================
+  REUSABLE CSS CLASSES
+  Common utility classes used throughout
+==========================================*/
+
+/* Section title styling with underline decoration */
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
@@ -87,6 +156,7 @@ img {
   text-align: center;
 }
 
+/* Decorative underline for section titles */
 .section-title::after {
   position: absolute;
   content: "";
@@ -99,9 +169,16 @@ img {
   background-color: var(--first-color);
 }
 
+/* Section spacing */
 .section {
   padding-top: 3rem;
   padding-bottom: 2rem;
+}
+
+/* Last section spacing adjustment */
+.section:last-of-type {
+  padding-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 /* Mobile section spacing improvements */
@@ -113,7 +190,12 @@ img {
   }
 }
 
-/*===== LAYOUT =====*/
+/*==========================================
+  LAYOUT STRUCTURE
+  Grid system and main layout containers
+==========================================*/
+
+/* Main grid container with max-width constraint */
 .bd-grid {
   max-width: 1024px;
   display: grid;
@@ -121,6 +203,7 @@ img {
   margin-right: var(--mb-2);
 }
 
+/* Fixed header at top of page */
 .l-header {
   width: 100%;
   position: fixed;
@@ -136,7 +219,12 @@ body.dark-mode .l-header {
   background-color: #121212;
 }
 
-/*===== NAV =====*/
+/*==========================================
+  NAVIGATION BAR
+  Header navigation and menu styles
+==========================================*/
+
+/* Main navigation container */
 .nav {
   height: var(--header-height);
   display: flex;
@@ -474,25 +562,19 @@ body.dark-mode .nav__dropdown-link:hover {
   }
 }
 
-/*===== HOME =====*/
-/* .home {
-  position: relative;
-  row-gap: 5rem;
-  padding: 4rem 0 5rem;
-}
+/*==========================================
+  HOME SECTION
+  Hero section with introduction and profile
+==========================================*/
 
-.home__data {
-  align-self: center;
-} */
-/*--------------------------------------*/
-
+/* Home section container */
 .home {
   position: relative;
   row-gap: 5rem;
   padding: 4rem 0 2rem;
 }
 
-/* Default styles for larger screens */
+/* Home content data container */
 .home__data {
   align-self: center;
 }
@@ -634,39 +716,55 @@ body.dark-mode .nav__dropdown-link:hover {
 
 
 
-/* ===== ABOUT =====*/
+/*==========================================
+  ABOUT SECTION
+  Personal introduction and background
+==========================================*/
+
+/* About section container */
 .about__container {
   row-gap: 2rem;
   text-align: center;
 }
 
+/* About subtitle */
 .about__subtitle {
   margin-bottom: var(--mb-2);
 }
 
+/* About image container */
 .about__img {
   justify-self: center;
 }
 
+/* About image styling */
 .about__img img {
   width: 200px;
   border-radius: 0.5rem;
 }
 
-/* ===== SKILLS =====*/
+/*==========================================
+  SKILLS SECTION
+  Technical skills with progress bars
+==========================================*/
+
+/* Skills section container */
 .skills__container {
   row-gap: 2rem;
   text-align: center;
 }
 
+/* Skills subtitle */
 .skills__subtitle {
   margin-bottom: var(--mb-2);
 }
 
+/* Skills description text */
 .skills__text {
   margin-bottom: var(--mb-4);
 }
 
+/* Individual skill item container */
 .skills__data {
   display: flex;
   justify-content: space-between;
@@ -727,7 +825,12 @@ body.dark-mode .nav__dropdown-link:hover {
   border-radius: 0.5rem;
 } */
 
-/* ===== WORK =====*/
+/*==========================================
+  WORK/PROJECTS SECTION
+  Portfolio project showcase gallery
+==========================================*/
+
+/* Projects grid container */
 .work__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -997,7 +1100,12 @@ body.dark-mode .projects__card:hover .projects__description {
   }
 }
 
-/* ===== CONTACT =====*/
+/*==========================================
+  CONTACT SECTION
+  Contact form for user inquiries
+==========================================*/
+
+/* Contact form container */
 .contact__container {
   max-width: 768px;
   margin: 0 auto;
@@ -1088,13 +1196,19 @@ body.dark-mode .contact__button:hover {
   background-color: var(--first-color);
 }
 
-/* ===== FOOTER =====*/
+/*==========================================
+  FOOTER SECTION
+  Site footer with social links
+==========================================*/
+
+/* Footer container */
 .footer {
   background-color: var(--second-color);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
+  margin: 0;
 }
 
 .footer__title {
@@ -1116,7 +1230,12 @@ body.dark-mode .contact__button:hover {
   font-size: var(--smaller-font-size);
 }
 
-/* ===== MEDIA QUERIES=====*/
+/*==========================================
+  MEDIA QUERIES
+  Responsive design breakpoints
+==========================================*/
+
+/* Extra small devices (320px and below) */
 @media screen and (max-width: 320px) {
   .home {
     row-gap: 2rem;
@@ -1291,7 +1410,12 @@ body.dark-mode .contact__button:hover {
   word-spacing: 0.03em;
 }
 
-/* ===== HOBBIES SECTION ===== */
+/*==========================================
+  HOBBIES SECTION
+  Personal interests and activities
+==========================================*/
+
+/* Hobbies section container */
 #hobbies {
   max-width: 768px;
   margin: 0 auto;
@@ -1431,7 +1555,12 @@ body.dark-mode .hobbies-list li span {
   }
 }
 
-/* ========== DARK MODE ========== */
+/*==========================================
+  DARK MODE STYLES
+  Theme toggle functionality and dark mode colors
+==========================================*/
+
+/* Dark mode body styles */
 body.dark-mode {
   background-color: #000000;
   color: white;
@@ -1514,7 +1643,12 @@ body.dark-mode .footer__icon i {
   }
 }
 
-/* ===== EDUCATION ===== */
+/*==========================================
+  EDUCATION SECTION
+  Academic background and qualifications
+==========================================*/
+
+/* Education section container */
 .education__container {
   max-width: 768px;
   margin: 0 auto;
