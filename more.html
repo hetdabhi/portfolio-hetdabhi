@@ -404,130 +404,52 @@
 
     <!--===== SCROLL REVEAL ANIMATIONS FOR MORE.HTML =====-->
     <script>
-        // Initialize ScrollReveal for more.html sections
+        // Initialize ScrollReveal immediately (no wrapper)
         const srMore = ScrollReveal({
             origin: 'top',
             distance: '60px',
-            duration: 2000,
-            delay: 200,
+            duration: 1000,
+            delay: 0,
+            reset: false,
+            viewFactor: 0.1,
+            mobile: true,
+            opacity: 0
         });
 
-        // Animate section titles
+        // Animate section titles FIRST - fast load
         srMore.reveal('.section-title', {
             origin: 'top',
             distance: '30px',
-            duration: 1000,
-            delay: 100
+            duration: 600,
+            delay: 100,
+            interval: 100
         });
 
-        // Animate certificates section - cards
+        // Animate certificates section - cards appear AFTER title
         srMore.reveal('.certificates__card', {
             origin: 'top',
-            distance: '40px',
-            duration: 1000,
-            interval: 200
-        });
-
-        // Animate certificate images
-        srMore.reveal('.certificates__image', {
-            origin: 'top',
-            distance: '30px',
-            duration: 1200,
-            interval: 200
-        });
-
-        // Animate certificate info
-        srMore.reveal('.certificates__info', {
-            origin: 'top',
-            distance: '20px',
-            duration: 1000,
-            delay: 300,
-            interval: 200
-        });
-
-        // Animate languages section - cards
-        srMore.reveal('.languages__card', {
-            origin: 'top',
-            distance: '40px',
-            duration: 1000,
-            interval: 150
-        });
-
-        // Animate language icons
-        srMore.reveal('.languages__icon', {
-            origin: 'top',
-            distance: '30px',
-            duration: 1000,
-            interval: 150
-        });
-
-        // Animate language names
-        srMore.reveal('.languages__name', {
-            origin: 'top',
-            distance: '20px',
-            duration: 1000,
-            delay: 200,
-            interval: 150
-        });
-
-        // Animate language level bars
-        srMore.reveal('.languages__level', {
-            origin: 'top',
-            distance: '20px',
-            duration: 1200,
-            delay: 300,
-            interval: 150
-        });
-
-        // Animate gaming section - cards
-        srMore.reveal('.gaming__card', {
-            origin: 'top',
-            distance: '40px',
-            duration: 1000,
-            interval: 200
-        });
-
-        // Animate gaming headers
-        srMore.reveal('.gaming__header', {
-            origin: 'top',
-            distance: '30px',
-            duration: 1000,
-            interval: 200
-        });
-
-        // Animate gaming content
-        srMore.reveal('.gaming__content', {
-            origin: 'top',
-            distance: '20px',
-            duration: 1000,
-            delay: 300,
-            interval: 200
-        });
-
-        // Animate gaming ID sections
-        srMore.reveal('.gaming__id-section', {
-            origin: 'top',
-            distance: '20px',
-            duration: 1000,
-            delay: 400,
-            interval: 200
-        });
-
-        // Animate gaming stats
-        srMore.reveal('.gaming__stats', {
-            origin: 'top',
-            distance: '20px',
+            distance: '50px',
             duration: 1000,
             delay: 500,
             interval: 200
         });
 
-        // Animate containers
-        srMore.reveal('.certificates__container, .languages__container, .gaming__container', {
+        // Animate languages section - cards appear AFTER title
+        srMore.reveal('.languages__card', {
             origin: 'top',
             distance: '50px',
-            duration: 1500,
-            delay: 100
+            duration: 1000,
+            delay: 500,
+            interval: 150
+        });
+
+        // Animate gaming section - cards appear AFTER title
+        srMore.reveal('.gaming__card', {
+            origin: 'top',
+            distance: '50px',
+            duration: 1000,
+            delay: 500,
+            interval: 200
         });
     </script>
 
