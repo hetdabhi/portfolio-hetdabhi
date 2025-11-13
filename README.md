@@ -41,10 +41,10 @@ portfolio/
 │   ├── 📁 js/
 │   │   └── 📄 main.js
 │   ├── 📁 img/
-│   │   ├── �️ certificates/
+│   │   ├── 📄 certificates/
 │   │   ├── 📁 screenshots/
 │   │   └── �️ [profile images, work samples, icons]
-│   ├── �e cv/
+│   ├── 📁 cv/
 │   │   └── 📄 cv.pdf
 │   └── 📁 projects/
 │       └── 📄 [project detail pages]
@@ -55,6 +55,7 @@ portfolio/
 ├── 🖼️ preview.png
 └── 📄 README.md
 ```
+
 
 ## Sections Overview
 
