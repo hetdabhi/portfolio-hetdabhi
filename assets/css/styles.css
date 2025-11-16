@@ -832,9 +832,17 @@ body.dark-mode .button:hover {
   width: 65%;
 }
 
-.skills__img {
+/* .skills__img {
   border-radius: 0.5rem;
+} */
+
+.skills__img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
 }
+
 
 /* .skills__img {
   width: 600px;
